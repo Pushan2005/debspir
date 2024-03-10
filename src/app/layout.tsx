@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import DarkMode from "@/components/dark-mode";
 
-const inter = Inter({ subsets: ["latin"] });
+const jetbrains_mono = JetBrains_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +18,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${jetbrains_mono.className} `}>
+        <ThemeProvider
+          attribute="Class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <DarkMode />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import NavBar from "@/components/navbar";
 import { Button } from "@/components/ui/button";
-import "./App.css";
+import "./app.css";
 
 export const metadata: Metadata = {
   title: "Devsphere",

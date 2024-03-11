@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-
 import NavBar from "@/components/navbar";
-import BoxBG from "@/components/boxBG";
+import { Button } from "@/components/ui/button";
+import "./App.css";
 
 export const metadata: Metadata = {
   title: "Devsphere",
@@ -12,18 +12,27 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <div
-        style={{
-          backgroundImage: `url(${BoxBG})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <h1 className="w-full text-6xl">
-          Open-Source and Blockchain fascinates us. Imagine a community that can
-          assist you with that.
+      <div className="pt-13 boxbg flex w-full flex-col items-center">
+        <h1 className="max-w-5xl text-center text-6xl font-semibold leading-[5rem]">
+          Open-Source and Blockchain fascinates us.
         </h1>
+        <h1 className="max-w-5xl text-center text-6xl font-semibold leading-[5rem]">
+          Imagine a community that can assist you with that.
+        </h1>
+        <h1 className="text-dark-text mb-8 mt-8 max-w-5xl text-center text-lg">
+          idk what to write here lmao
+        </h1>
+        <div className="flex items-center">
+          <Button className="mr-2 rounded-full bg-gradient-to-tr from-[#3082e2] to-[#5ba7ff] p-6 text-lg text-white">
+            Join Community
+          </Button>
+          <Button
+            variant="outline"
+            className="ml-2  rounded-full border-white p-6 text-lg"
+          >
+            Watch Our Intro
+          </Button>
+        </div>
       </div>
     </>
   );

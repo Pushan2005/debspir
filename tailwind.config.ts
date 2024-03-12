@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      zIndex: {
+        "-1": "-1",
+      },
       spacing: {
         "24": "6rem",
       },
